@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8013
+spring:
+  profiles: dev
+  application:
+    name: MICROSERVICECLOUD-CONFIG-CLIENT-WK
+eureka:
+  client:
+    server-uel:
+      defaultZone: http://eureka-dev.com:7001/eureka/
+---
+server:
+  port: 8014
+spring:
+  profiles: test
+  application:
+    name: MICROSERVICECLOUD-CONFIG-CLIENT-WK
+eureka:
+  client:
+    server-uel:
+      defaultZone: http://eureka-test.com:7001/eureka/
